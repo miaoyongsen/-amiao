@@ -30,7 +30,7 @@ def jietu():
 
 def get_news1():
 #获取网页源代码
-    url = 'http://www.tjbh.gov.cn/'
+    url = 'http://www.xxx.cn/'
     header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36'}
     try:
         response = requests.get(url,headers=header,timeout=60)
@@ -50,9 +50,9 @@ def get_news1():
 def send_news(aa):
 
     try:
-        my_friend = bot.friends().search(u'阿苗')[0]   #你朋友的微信名称，不是备注，也不是微信帐号。
-        my_friends = bot.friends().search(u'慕容瑄')[0]   #你朋友的微信名称，不是备注，也不是微信帐号。
-        my_friendss = bot.friends().search(u'宋午阳')[0]   #你朋友的微信名称，不是备注，也不是微信帐号。
+        my_friend = bot.friends().search(u'xx')[0]   #你朋友的微信名称，不是备注，也不是微信帐号。
+        my_friends = bot.friends().search(u'xxx')[0]   #你朋友的微信名称，不是备注，也不是微信帐号。
+        my_friendss = bot.friends().search(u'xxx')[0]   #你朋友的微信名称，不是备注，也不是微信帐号。
 
         if get_news1()[0] != aa and get_news1() != None:
             nowTime = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
@@ -62,9 +62,9 @@ def send_news(aa):
             my_friends.send_image(c)
             my_friendss.send_image(c)
 
-            my_friends.send(u"网页被篡改，请查看网址http://www.tjbh.gov.cn/" + '\n' + 'md5值：' + get_news1()[0] + '\n' + '网页状态码：' + str(get_news1()[1]) + '\n' + '当前时间：' + nowTime)
-            my_friendss.send(u"网页被篡改，请查看网址http://www.tjbh.gov.cn/" + '\n' + 'md5值：' + get_news1()[0] + '\n' + '网页状态码：' + str(get_news1()[1]) + '\n' + '当前时间：' + nowTime)
-            my_friend.send(u"网页被篡改，请查看网址http://www.tjbh.gov.cn/" + '\n' + 'md5值：' + get_news1()[0] + '\n' + '网页状态码：' + str(get_news1()[1]) + '\n' + '当前时间：' + nowTime)
+            my_friends.send(u"网页被篡改，请查看网址http://www.xxx.cn/" + '\n' + 'md5值：' + get_news1()[0] + '\n' + '网页状态码：' + str(get_news1()[1]) + '\n' + '当前时间：' + nowTime)
+            my_friendss.send(u"网页被篡改，请查看网址http://www.xxx.cn/" + '\n' + 'md5值：' + get_news1()[0] + '\n' + '网页状态码：' + str(get_news1()[1]) + '\n' + '当前时间：' + nowTime)
+            my_friend.send(u"网页被篡改，请查看网址http://www.xxx.cn/" + '\n' + 'md5值：' + get_news1()[0] + '\n' + '网页状态码：' + str(get_news1()[1]) + '\n' + '当前时间：' + nowTime)
             global mdd
             mdd = get_news1()[0]
         elif get_news1() == None:
@@ -72,7 +72,7 @@ def send_news(aa):
         else:
             print('一切正常')
     except:
-        my_friend = bot.friends().search(u'阿苗')[0]#你的微信名称，不是微信帐号。
+        my_friend = bot.friends().search(u'xx')[0]#你的微信名称，不是微信帐号。
         my_friend.send(u"消息发送失败了")
 
 #md5报错之后修改
