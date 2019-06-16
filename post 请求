@@ -1,0 +1,46 @@
+#抓包
+import requests
+
+url = 'https://mail.qq.com/cgi-bin/compose_send?sid=ByzpWQrS861P5GA7'
+header = {
+    'User-Agent':'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.0 Safari/605.1.15',
+    'Cookie':'CCSHOW=000001; new_mail_num=-2074193109&283; webp=0; edition=mail.qq.com; foxacc=-2074193109&0; p_skey=Hq3mpa1wAYwC6KoZLnqeQaX0h-Nw1uKQI5ftVfHAgmM_; p_uin=o2220774187; pt4_token=Y54U7HtQwRq13kI1tKPrDnE2Mcm7RZwOmXwFB8*UoS8_; qm_antisky=-2074193109&5d540a1a3532cfd3903d370ba07a7610cafaf54d851b1b19bd77d7413cb87248; qm_domain=https://mail.qq.com; qm_flag=0; qm_loginfrom=-2074193109&wpt; qm_ptsk=-2074193109&@y5YlbRcws; qm_username=2220774187; qqmail_alias=2220774187@qq.com; sid=-2074193109&468bb177a039eabd4cc1b53300beb5e2,qSHEzbXBhMXdBWXdDNktvWkxucWVRYVgwaC1OdzF1S1FJNWZ0VmZIQWdtTV8.; ssl_edition=sail.qq.com; username=-2074193109&2220774187; wimrefreshrun=0&; pt2gguin=o2220774187; skey=@y5YlbRcws; uin=o2220774187; ptcz=05e7b5a67e674fc0305cb53e9eba63d8bc9ae2bc961ce0d11cbfca37ddbab735; ptisp=cm; ptui_loginuin=2220774187; pgv_si=s8207443968; pgv_pvid=4913979875; o_cookie=2220774187; RK=SO5JVpqQ6D; pgv_pvi=9693184',
+    'Referer':'https://mail.qq.com/zh_CN/htmledition/ajax_proxy.html?mail.qq.com&v=140521',
+    'Content-Type':'application/x-www-form-urlencoded'
+}
+data = {
+'12e748469a7b361d60f703a6737127a2':'468bb177a039eabd4cc1b53300beb5e2',
+'sid':'ByzpWQrS861P5GA7',
+'from_s':'cnew',
+'to':'1763225341@qq.com',
+'subject':'福利',
+'content__html':'<div>cop-33 注意身体</div>',
+'sendmailname':'2220774187@qq.com',
+'savesendbox':'1',
+'actiontype':'send',
+'sendname':'欢麻麻',
+'acctid':'0',
+'separatedcopy':'false',
+'attachlist_log':'%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-11-07%20%E4%B8%8B%E5%8D%888.19.12.png%C2%A0(463.0K)%2C1%2C0%7C%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-11-07%20%E4%B8%8B%E5%8D%888.19.12.png%2Ccomplete%2CH5CPopupMail%2CYL0CMvCaAO',
+'attach2BigList':'%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-11-07%20%E4%B8%8B%E5%8D%888.19.12.png,474128,031c3648e32d1942ae433bfca426058dab30f306,7818499cfe8a0c7f38976933ee1354f0',
+'upfilelist':'YL0CMvCaAOfS5zmF%2FLdBTs9RLWFzXRM30JkYN92C9EBZqr%2FrxkACh9F2h%2BGLsg13yrO5b0jOgefCUYUxSK6HOumTyq7cbXt0a5zLHeXW9XmmzczNRLl7XqY6I5hFk9zUrrlbQsOPgkF5h4VNr%2FRTk7ni8mX5%2B3LTeKW34SIq43LiSfEOoxRcDw%3D%3D',
+'s':'comm',
+'hitaddrbook':'0',
+'selfdefinestation':'-1',
+'domaincheck':'0',
+'cgitm':'1541593285593',
+'clitm':'1541593297703',
+'comtm':'1541594501598',
+'logattcnt':'0',
+'logattsize':'0',
+'cginame':'compose_send',
+'ef':'js',
+'t':'compose_send.json',
+'resp_charset':'UTF8'
+}
+
+
+
+res = requests.post(url,headers = header,data = data)
+print(res)
+
