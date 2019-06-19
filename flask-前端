@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>上传演示</title>
+    <script>
+        function myFunction() {
+    alert("提交成功！");
+    }
+    </script>
+</head>
+<body>
+    <form action="" method='POST'>
+        姓名：<input type="text" class="txt_input" name="name"  value="" style="margin-top:10px;"/><br>
+        工作方向：<input type="text" class="txt_input" name="gzfx"  value="" style="margin-top:10px;"/><br>
+        工作内容：<input type="text" class="txt_input" name="gznr"  value="" style="margin-top:10px;"/><br>
+        工作进度：<input type="text" class="txt_input" name="gzjd"  value="" style="margin-top:10px;"/><br>
+        完成情况：<input type="text" class="txt_input" name="wcqk"  value="" style="margin-top:10px;"/><br>
+        明日计划：<input type="text" class="txt_input" name="mrjh"  value="" style="margin-top:10px;"/><br>
+
+        <input type="submit" value="完成" class="button-new" onclick="myFunction()" style="margin-top:15px;"/>
+
+    </form>
+</body>
+</html>
